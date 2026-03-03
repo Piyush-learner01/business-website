@@ -1,0 +1,8 @@
+:root {
+  --primary: #2563eb;
+  --dark: #1f2937;
+  --light: #ffffff;
+  --gray: #6b7280;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
