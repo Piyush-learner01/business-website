@@ -1,18 +1,36 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function Navigation() {
+function Navigation({ isOpen, onNavigate }) {
+  const navClassName = `nav-links ${isOpen ? "open" : ""}`;
+
   return (
-    <nav>
-      <ul style={{
-        display: "flex",
-        gap: "25px",
-        listStyle: "none",
-        marginTop: "10px"
-      }}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+    <nav aria-label="Main navigation">
+      <ul className={navClassName} id="site-navigation">
+        <li>
+          <NavLink to="/" onClick={onNavigate}>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/services" onClick={onNavigate}>
+            Services
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/portfolio" onClick={onNavigate}>
+            Portfolio
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" onClick={onNavigate}>
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" onClick={onNavigate}>
+            Contact
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

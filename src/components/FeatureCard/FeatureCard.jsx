@@ -1,17 +1,13 @@
-function FeatureCard({ title, description }) {
+function FeatureCard({ title, description, icon, action }) {
   return (
-    <div
-      className="fade-in"
-      style={{
-        background: "white",
-        padding: "30px",
-        borderRadius: "var(--radius)",
-        boxShadow: "var(--shadow)"
-      }}
-    >
+    <article className="card feature-card reveal-up">
+      <p className="feature-icon" aria-hidden="true">
+        {icon}
+      </p>
       <h3>{title}</h3>
       <p>{description}</p>
-    </div>
+      {action && <p className="feature-action">{action}</p>}
+    </article>
   );
 }
 
