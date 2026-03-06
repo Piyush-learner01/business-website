@@ -33,6 +33,4 @@ All items below are included for full-mark coverage:
 - `deployment-guide.md`: Vercel, Netlify, and GitHub Pages steps.
 - `testing-evidence.md`: Test cases, command evidence template, and CI references.
 
-## Visual Assets Path
 
-- Screenshots folder: `docs/assets/screenshots/`
